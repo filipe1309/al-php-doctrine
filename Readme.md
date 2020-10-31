@@ -9,3 +9,7 @@ vendor/bin/doctrine orm:info
 vendor/bin/doctrine orm:mapping:describe Aluno
 
 vendor/bin/doctrine orm:schema-tool:create
+
+php commands/criar-aluno.php
+
+php commands/criar-aluno.php "Elvis Presley"
