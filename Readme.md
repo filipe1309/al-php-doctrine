@@ -13,3 +13,5 @@ vendor/bin/doctrine orm:schema-tool:create
 php commands/criar-aluno.php
 
 php commands/criar-aluno.php "Elvis Presley"
+
+$ php commands/buscar-alunos.php 
