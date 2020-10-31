@@ -14,4 +14,7 @@ php commands/criar-aluno.php
 
 php commands/criar-aluno.php "Elvis Presley"
 
-$ php commands/buscar-alunos.php 
+php commands/buscar-alunos.php
+
+php commands/atualizar-nome-aluno.php 1 "Bob Dylan 3"
+
