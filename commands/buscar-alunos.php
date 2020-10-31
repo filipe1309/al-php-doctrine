@@ -20,5 +20,5 @@ foreach ($alunoList as $aluno) {
 $elvis = $alunoRepository->find(2);
 echo $elvis->getNome() . PHP_EOL;
 
-$bob = $alunoRepository->findOneBy(['nome' => 'Bob Marley']);
+$bob = $alunoRepository->findOneBy(['nome' => 'Elvis Presley']);
 echo $bob->getNome() . PHP_EOL;
