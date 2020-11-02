@@ -21,7 +21,7 @@ class Aluno
      */
     private $nome;
     /**
-     * @OneToMany(targetEntity="Telefone", mappedBy="aluno")
+     * @OneToMany(targetEntity="Telefone", mappedBy="aluno", cascade={"remove", "persist"})
      */
     private $telefones;
 
@@ -46,7 +46,7 @@ class Aluno
         return $this;
     }
 
-    public function addTelefones(Telefone $telefone): self
+    public function addTelefone(Telefone $telefone): self
     {
         $this->telefones->add($telefone);
         $telefone->setAluno($this);

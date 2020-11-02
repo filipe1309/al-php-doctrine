@@ -27,3 +27,5 @@ vendor/bin/doctrine-migrations migrations:status
 vendor/bin/doctrine-migrations migrations:diff
 
 vendor/bin/doctrine-migrations migrations:migrate
+
+php commands/criar-aluno.php "Bob Dylan" "1111-1111" "2222-2222"
