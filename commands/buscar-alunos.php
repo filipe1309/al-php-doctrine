@@ -9,10 +9,14 @@ require_once __DIR__ . '/../vendor/autoload.php';
 $entityManagerFactory = new EntityManagerFactory();
 $entityManager = $entityManagerFactory->getEntityManager();
 
-$alunoRepository = $entityManager->getRepository(Aluno::class);
+// $alunoRepository = $entityManager->getRepository(Aluno::class);
 
-/** @var Aluno[] $alunoList*/
-$alunoList = $alunoRepository->findAll();
+// /** @var Aluno[] $alunoList*/
+// $alunoList = $alunoRepository->findAll();
+
+$dql = "SELECT aluno from Alura\\Doctrine\\Entity\\Aluno AS aluno WHERE aluno.id = 1 OR aluno.nome = 'Elvis Presley' ORDER BY aluno.nome";
+$query = $entityManager->createQuery($dql);
+$alunoList = $query->getResult();
 
 foreach ($alunoList as $aluno) {
     $telefones = $aluno
@@ -26,10 +30,10 @@ foreach ($alunoList as $aluno) {
     echo "\n\n";
 }
 
-$elvis = $alunoRepository->find(2);
-if ($elvis)
-    echo $elvis->getNome() . PHP_EOL;
+// $elvis = $alunoRepository->find(2);
+// if ($elvis)
+//     echo $elvis->getNome() . PHP_EOL;
 
-$bob = $alunoRepository->findOneBy(['nome' => 'Elvis Presley']);
-if ($bob)
-    echo $bob->getNome() . PHP_EOL;
+// $bob = $alunoRepository->findOneBy(['nome' => 'Elvis Presley']);
+// if ($bob)
+//     echo $bob->getNome() . PHP_EOL;
