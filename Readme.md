@@ -39,3 +39,15 @@ vendor/bin/doctrine-migrations migrations:migrate
 php commands/criar-curso.php "Fundamentos de Doctrine"
 
 php commands/vincular-aluno-curso.php 1 1
+
+php commands/buscar-alunos.php
+
+php commands/relatorio-curso-por-aluno.php
+
+php commands/relatorio-curso-por-aluno-dql.php
+
+php commands/total-alunos.php
+
+php commands/relatorio-curso-por-aluno-repository.php 
+
+http://www.laraveldoctrine.org/
