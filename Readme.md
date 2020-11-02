@@ -37,3 +37,5 @@ vendor/bin/doctrine-migrations migrations:diff
 vendor/bin/doctrine-migrations migrations:migrate
 
 php commands/criar-curso.php "Fundamentos de Doctrine"
+
+php commands/vincular-aluno-curso.php 1 1
