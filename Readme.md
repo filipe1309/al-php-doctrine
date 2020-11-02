@@ -18,3 +18,12 @@ php commands/buscar-alunos.php
 
 php commands/atualizar-nome-aluno.php 1 "Bob Dylan 3"
 
+composer require doctrine/migrations
+
+vendor/bin/doctrine-migrations 
+
+vendor/bin/doctrine-migrations migrations:status
+
+vendor/bin/doctrine-migrations migrations:diff
+
+vendor/bin/doctrine-migrations migrations:migrate
